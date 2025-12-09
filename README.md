@@ -4,7 +4,7 @@ A machine learning project that predicts salary ranges for AI/ML job postings us
 
 ## Project Overview
 
-This project implements a neural network solution to predict salary ranges for AI job market positions. The model uses PyTorch to train an MLP classifier that takes encoded job features as input and predicts salary categories.
+This project implements a neural network solution to predict salary ranges for AI job market positions. The model uses PyTorch to train an MLP classifier that takes encoded job features as input and predicts salary categories. A demo GUI application is included to demonstrate the trained model in action.
 
 ## Tech Stack
 
@@ -36,6 +36,7 @@ ai-job-analysis-model/
 ├── ai_job_market.csv           # Dataset (not included in repo)
 ├── model_state.pth             # Saved PyTorch model state dict
 ├── encoding_mappings.pkl       # Saved encoding mappings for deployment
+├── demo_app.py                 # Demo GUI application for salary prediction
 ├── mlp_model.joblib            # Legacy model file (not used)
 ├── my.py                       # Utility functions
 ├── requirements.txt            # Python package dependencies
@@ -62,6 +63,16 @@ The notebook includes:
 - Train/test split (80/20)
 - Model training and evaluation
 - Model saving (`model_state.pth` and `encoding_mappings.pkl`)
+
+### Running the Demo Application
+
+1. Ensure the model files (`model_state.pth` and `encoding_mappings.pkl`) exist (created by running the notebook)
+2. Run the demo application:
+```bash
+python demo_app.py
+```
+
+The demo application provides a GUI interface to predict salary ranges for AI/ML job postings. Enter job details including title, industry, employment type, experience level, company size, and optionally skills and tools. Note: The model performs best when skills and tools are provided.
 
 ## Model Architecture
 
